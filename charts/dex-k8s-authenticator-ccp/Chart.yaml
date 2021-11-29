@@ -3,7 +3,7 @@ annotations:
     - Add license file
   artifacthub.io/images: |
     - name: dex-k8s-authenticator
-      image: ruber19/dex-k8s-authenticator:1.4.1
+      image: ruber19/dex-k8s-authenticator-ccp:1.4.1
 apiVersion: v2
 appVersion: 1.4.1
 description: A helper web-app which talks to one or more Dex Identity services to

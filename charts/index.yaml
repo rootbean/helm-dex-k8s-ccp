@@ -6,13 +6,13 @@ entries:
         - Add license file
       artifacthub.io/images: |
         - name: dex-k8s-authenticator
-          image: ruber19/dex-k8s-authenticator:1.4.1
+          image: ruber19/dex-k8s-authenticator-ccp:1.4.1
     apiVersion: v2
     appVersion: 1.4.1
-    created: "2021-11-29T10:15:29.618632108-05:00"
+    created: "2021-11-29T10:37:57.082741667-05:00"
     description: A helper web-app which talks to one or more Dex Identity services
       to generate kubectl commands for creating and modifying a kubeconfig.
-    digest: c0a5e6270c0ff6fc10d3ceff52dd32fa6044ac19a7252bd0e8645ac9bb92184b
+    digest: 64e4796fbad6c15276b9213188247ac9bb3b96ee3bd1dff5b0cf92c840134c3f
     home: https://github.com/mintel/dex-k8s-authenticator
     icon: https://dexidp.io/favicon.png
     keywords:
@@ -33,4 +33,4 @@ entries:
     urls:
     - dex-k8s-authenticator-0.0.2.tgz
     version: 0.0.2
-generated: "2021-11-29T10:15:29.61756693-05:00"
+generated: "2021-11-29T10:37:57.081263861-05:00"
