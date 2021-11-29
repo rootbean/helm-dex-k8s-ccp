@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "dex-k8s-authenticator.fullname" . }}
+  name: {{ include "dex-k8s-authenticator-ccp.fullname" . }}
   labels:
-    {{- include "dex-k8s-authenticator.labels" . | nindent 4 }}
+    {{- include "dex-k8s-authenticator-ccp.labels" . | nindent 4 }}
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
   {{- end }}
   selector:
     matchLabels:
-      {{- include "dex-k8s-authenticator.selectorLabels" . | nindent 6 }}
+      {{- include "dex-k8s-authenticator-ccp.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       {{- with .Values.podAnnotations }}
@@ -18,13 +18,13 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
-        {{- include "dex-k8s-authenticator.selectorLabels" . | nindent 8 }}
+        {{- include "dex-k8s-authenticator-ccp.selectorLabels" . | nindent 8 }}
     spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      serviceAccountName: {{ include "dex-k8s-authenticator.serviceAccountName" . }}
+      serviceAccountName: {{ include "dex-k8s-authenticator-ccp.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
@@ -33,7 +33,7 @@ spec:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
-          args: ["--config", "/etc/dex-k8s-authenticator/config.yaml"]
+          args: ["--config", "/etc/dex-k8s-authenticator-ccp/config.yaml"]
           env:
             {{- range $key, $value := .Values.env }}
             - name: {{ $key }}
@@ -59,7 +59,7 @@ spec:
             {{- toYaml .Values.resources | nindent 12 }}
           volumeMounts:
             - name: config
-              mountPath: /etc/dex-k8s-authenticator
+              mountPath: /etc/dex-k8s-authenticator-ccp
               readOnly: true
           {{- with .Values.volumeMounts }}
             {{- toYaml . | nindent 12 }}
@@ -67,7 +67,7 @@ spec:
       volumes:
         - name: config
           secret:
-            secretName: {{ include "dex-k8s-authenticator.fullname" . }}
+            secretName: {{ include "dex-k8s-authenticator-ccp.fullname" . }}
       {{- with .Values.volumes }}
         {{- toYaml . | nindent 8 }}
       {{- end }}
