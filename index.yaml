@@ -8,7 +8,7 @@ entries:
         - name: dex-k8s-authenticator
           image: ruber19/dex-k8s-authenticator-ccp:1.0
     apiVersion: v2
-    appVersion: 1.0.0
+    appVersion: "1.0.0"
     created: "2021-11-28T23:29:58.667701078-05:00"
     description: A helper web-app which talks to one or more Dex Identity services
       to generate kubectl commands for creating and modifying a kubeconfig.
