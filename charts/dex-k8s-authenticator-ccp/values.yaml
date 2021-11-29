@@ -1,4 +1,4 @@
-# Default values for dex-k8s-authenticator.
+# Default values for dex-k8s-authenticator-ccp.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
@@ -7,13 +7,13 @@ replicaCount: 1
 
 image:
   # -- Name of the image repository to pull the container image from.
-  repository: rootbean/dex-k8s-authenticator-ccp
+  repository: ruber19/dex-k8s-authenticator-ccp
 
   # -- [Image pull policy](https://kubernetes.io/docs/concepts/containers/images/#updating-images) for updating already existing images on a node.
   pullPolicy: IfNotPresent
 
   # -- Image tag override for the default value (chart appVersion).
-  tag: ""
+  tag: "1.4.1"
 
 # -- Reference to one or more secrets to be used when [pulling images](https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/#create-a-pod-that-uses-your-secret) (from private registries).
 imagePullSecrets: []
