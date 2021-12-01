@@ -3,10 +3,10 @@ annotations:
     - Add license file
   artifacthub.io/images: |
     - name: dex-k8s-authenticator-ccp
-      image: ruber19/dex-k8s-authenticator-ccp:1.4.5
+      image: ruber19/dex-k8s-authenticator-ccp:1.4.6
 apiVersion: v2
-appVersion: 1.4.5
-description: A helper web-app which talks to one or more Dex Identity services to
+appVersion: 1.4.6
+description: A helper web-app which talks to one ormore Dex Identity services to
   generate kubectl commands for creating and modifying a kubeconfig.
 home: https://github.com/rootbean/dex-k8s-authenticator-ccp
 icon: https://dexidp.io/favicon.png
