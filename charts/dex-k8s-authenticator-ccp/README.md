@@ -1,18 +1,18 @@
 # dex-k8s-authenticator-ccp
 
-![version: 0.0.2](https://img.shields.io/badge/version-0.0.2-informational?style=flat-square) ![type: application](https://img.shields.io/badge/type-application-informational?style=flat-square) ![app version: 1.4.0](https://img.shields.io/badge/app%20version-1.4.0-informational?style=flat-square) ![kube version: >=1.14.0-0](https://img.shields.io/badge/kube%20version->=1.14.0--0-informational?style=flat-square) [![artifact hub](https://img.shields.io/badge/artifact%20hub-dex--k8s--authenticator-informational?style=flat-square)](https://artifacthub.io/packages/helm/sagikazarmark/dex-k8s-authenticator-ccp-ccp)
+![version: 0.0.2](https://img.shields.io/badge/version-0.0.2-informational?style=flat-square) ![type: application](https://img.shields.io/badge/type-application-informational?style=flat-square) ![app version: 1.4.0](https://img.shields.io/badge/app%20version-1.4.0-informational?style=flat-square) ![kube version: >=1.14.0-0](https://img.shields.io/badge/kube%20version->=1.14.0--0-informational?style=flat-square) [![artifact hub](https://img.shields.io/badge/artifact%20hub-dex--k8s--authenticator-informational?style=flat-square)](https://artifacthub.io/packages/helm/sagikazarmark/dex-k8s-authenticator-ccp)
 
 A helper web-app which talks to one or more Dex Identity services to generate kubectl commands for creating and modifying a kubeconfig.
 
-**Homepage:** <https://github.com/mintel/dex-k8s-authenticator-ccp-ccp>
+**Homepage:** <https://github.com/mintel/dex-k8s-authenticator-ccp>
 
-**Note: this is an alternative to the [official chart](https://github.com/mintel/dex-k8s-authenticator-ccp-ccp/tree/master/charts/dex-k8s-authenticator-ccp-ccp) with better ingress support, more documentation and it's published in a Helm repository.**
+**Note: this is an alternative to the [official chart](https://github.com/mintel/dex-k8s-authenticator-ccp/tree/master/charts/dex-k8s-authenticator-ccp-ccp-ccp) with better ingress support, more documentation and it's published in a Helm repository.**
 
 ## TL;DR;
 
 ```bash
 helm repo add skm https://charts.sagikazarmark.dev
-helm install --generate-name --wait skm/dex-k8s-authenticator-ccp-ccp
+helm install --generate-name --wait skm/dex-k8s-authenticator-ccp-ccp-ccp
 ```
 
 ## Values
@@ -20,7 +20,7 @@ helm install --generate-name --wait skm/dex-k8s-authenticator-ccp-ccp
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
 | replicaCount | int | `1` | Number of replicas (pods) to launch. |
-| image.repository | string | `"mintel/dex-k8s-authenticator-ccp-ccp"` | Name of the image repository to pull the container image from. |
+| image.repository | string | `"mintel/dex-k8s-authenticator-ccp-ccp-ccp"` | Name of the image repository to pull the container image from. |
 | image.pullPolicy | string | `"IfNotPresent"` | [Image pull policy](https://kubernetes.io/docs/concepts/containers/images/#updating-images) for updating already existing images on a node. |
 | image.tag | string | `""` | Image tag override for the default value (chart appVersion). |
 | imagePullSecrets | list | `[]` | Reference to one or more secrets to be used when [pulling images](https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/#create-a-pod-that-uses-your-secret) (from private registries). |
