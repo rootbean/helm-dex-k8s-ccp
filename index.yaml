@@ -9,10 +9,10 @@ entries:
           image: ruber19/dex-k8s-authenticator-ccp:1.4.3
     apiVersion: v2
     appVersion: 1.4.3
-    created: "2021-11-30T22:13:56.226476112-05:00"
+    created: "2021-11-30T22:17:44.525366805-05:00"
     description: A helper web-app which talks to one or more Dex Identity services
       to generate kubectl commands for creating and modifying a kubeconfig.
-    digest: ebf9ffe1be7fdacb1542df32629d7d793dedfba038cb4aee961402f006c94a2c
+    digest: 89bf885e5c7dbb294625ce60cd5e295352d4c56e425b2135810a5309c2404e2f
     home: https://github.com/rootbean/dex-k8s-authenticator-ccp
     icon: https://dexidp.io/favicon.png
     keywords:
@@ -33,4 +33,4 @@ entries:
     urls:
     - dex-k8s-authenticator-ccp-0.0.2.tgz
     version: 0.0.2
-generated: "2021-11-30T22:13:56.225355916-05:00"
+generated: "2021-11-30T22:17:44.524196297-05:00"

@@ -6,7 +6,7 @@ A helper web-app which talks to one or more Dex Identity services to generate ku
 
 **Homepage:** <https://github.com/mintel/dex-k8s-authenticator-ccp>
 
-**Note: this is an alternative to the [official chart](https://github.com/mintel/dex-k8s-authenticator-ccp/tree/master/charts/dex-k8s-authenticator-ccp-ccp-ccp) with better ingress support, more documentation and it's published in a Helm repository.**
+**Note: this is an alternative to the [official chart](https://github.com/mintel/dex-k8s-authenticator-ccp/tree/master/charts/dex-k8s-authenticator-ccp) with better ingress support, more documentation and it's published in a Helm repository.**
 
 ## TL;DR;
 
